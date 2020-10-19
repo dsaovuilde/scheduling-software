@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ReportsScreenController">
+   <children>
+      <TabPane layoutX="7.0" layoutY="6.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Types">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="appointmentTypeTable" prefHeight="371.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="typeTableMonthColumn" prefWidth="129.0" text="Month" />
+                            <TableColumn fx:id="typeTableTypeColumn" minWidth="0.0" prefWidth="271.0" text="Appointment Type" />
+                              <TableColumn fx:id="typeTableNumberColumn" prefWidth="199.0" text="Number" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Length">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="appointmentLengthTable" prefHeight="374.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="lengthTableMonthColumn" prefWidth="179.0" text="Month" />
+                            <TableColumn fx:id="lengthTableLengthColumn" prefWidth="420.0" text="Average Appointment Length" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="closeButton" layoutX="541.0" layoutY="406.0" mnemonicParsing="false" onAction="#handleClose" text="Close" />
+   </children>
+</AnchorPane>

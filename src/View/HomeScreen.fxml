@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.HomeScreenController">
+   <children>
+      <Label layoutX="115.0" layoutY="29.0" text="Scheduling Software">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="491.0" layoutY="29.0" text="User:" />
+      <Label fx:id="userLabel" layoutX="528.0" layoutY="29.0" prefHeight="17.0" prefWidth="57.0" />
+      <Label layoutX="40.0" layoutY="100.0" text="Upcomming Appointments" />
+      <Button fx:id="addAppointmentButton" layoutX="35.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleAddAppointment" text="Add" />
+      <Button fx:id="modifyAppointmentButton" layoutX="85.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleModifyAppointment" text="Modify" />
+      <Button layoutX="150.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleDeleteAppointment" text="Delete" />
+      <Button fx:id="addCustomerButton" layoutX="280.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleAddCustomer" text="Add" />
+      <Button fx:id="modifyCustomerButton" layoutX="330.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleModifyCustomer" text="Modify" />
+      <Button layoutX="395.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleDeleteCustomer" text="Delete" />
+      <Button fx:id="monthlyCalendarButton" layoutX="35.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleMonthlyCalendar" text="Monthly Calendar" />
+      <Button layoutX="175.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleWeeklyCalendar" text="Weekly Calendar" />
+      <Button cancelButton="true" layoutX="599.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+      <Button fx:id="logoutButton" layoutX="536.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+      <Label layoutX="337.0" layoutY="101.0" text="Customers" />
+      <TextField fx:id="appointmentSearchField" layoutX="75.0" layoutY="135.0" prefWidth="125.0" promptText="ID or Name" />
+      <TextField fx:id="customerSearchField" layoutX="325.0" layoutY="134.0" prefWidth="125.0" promptText="ID or Name" />
+      <Button layoutX="15.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleAppointmentSearch" text="Search" />
+      <Button layoutX="265.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleCustomerSearch" text="Search" />
+      <TableView fx:id="appointmentTable" layoutX="15.0" layoutY="175.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="appointmentIdColumn" prefWidth="31.0" text="ID" />
+          <TableColumn fx:id="appointmentTitleColumn" prefWidth="57.0" text="Title" />
+            <TableColumn fx:id="appointmentStartColumn" prefWidth="119.0" text="Start" />
+        </columns>
+      </TableView>
+      <TableView fx:id="customerTable" layoutX="255.0" layoutY="175.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="customerIdColumn" prefWidth="34.0" text="ID" />
+          <TableColumn fx:id="customerNameColumn" prefWidth="91.0" text="Name" />
+            <TableColumn fx:id="customerCityColumn" prefWidth="74.0" text="City" />
+        </columns>
+      </TableView>
+      <Button layoutX="309.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleReports" text="Reports" />
+   </children>
+</AnchorPane>
